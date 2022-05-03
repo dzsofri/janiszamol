@@ -1,21 +1,24 @@
 from tkinter import *
 def trapezterulet():
     def szamit():
-        if mezo1.get() == "" or mezo2.get() == "" or mezo3.get() == "":
+        A = eval(mezo1.get())
+        C = eval(mezo2.get())
+        M = eval(mezo3.get())
+        if A <= 0 or C <= 0 or M <= 0:
             mezo4.delete(0, END)
-            mezo4.insert(0, "Írd be az adatokat!")
+            mezo4.insert(0, 'Nem lehet nulla / negatív szám')
         else:
-            A = eval(mezo1.get())
-            C = eval(mezo2.get())
-            M = eval(mezo3.get())
-
-        if A > 0 and C > 0 and M > 0:
             terulet = (A + C) * M / 2 
-            mezo4.delete(0, END)
+            mezo4.delete(0,END)
             mezo4.insert(0,str(terulet))
-        else:
+
+    def habaromvagy():
+        try:
+            szamit()
+
+        except:
             mezo4.delete(0, END)
-            mezo4.insert(0, "Nem jó adat! (x <= 0)")
+            mezo4.insert(0, 'Hibás karakter')
 
     def torles():
         mezo1.delete(0, END)
@@ -26,17 +29,18 @@ def trapezterulet():
     trapezteruletablak = Toplevel(fooldal)
     trapezteruletablak.title("Trapéz területe")
     trapezteruletablak.minsize(width = 300, height = 100)
-    szoveg1 = Label(trapezteruletablak, text = "A:")
-    szoveg2 = Label(trapezteruletablak, text = "C:")
-    szoveg3 = Label(trapezteruletablak, text = "Magasság:")
-    szoveg4 = Label(trapezteruletablak, text = "Eredmény:")
+
+    szoveg1 = Label(trapezteruletablak, text = "A (cm):")
+    szoveg2 = Label(trapezteruletablak, text = "C (cm):")
+    szoveg3 = Label(trapezteruletablak, text = "Magasság (cm): ")
+    szoveg4 = Label(trapezteruletablak, text = "Területe (cm2):")
 
     szoveg1.grid(row = 1)
     szoveg2.grid(row = 2)
     szoveg3.grid(row = 3)
     szoveg4.grid(row = 6)
         
-    szamitasgomb = Button(trapezteruletablak, text = "Számítás", command= szamit)
+    szamitasgomb = Button(trapezteruletablak, text = "Számítás", command= habaromvagy)
     szamitasgomb.grid(row = 5, column = 2, sticky = W)
 
     mezo1 = Entry(trapezteruletablak)
@@ -59,28 +63,29 @@ def trapezterulet():
 
 
 
-#kerület
-
-
-
 def trapezkerulet():
-    def szamit():
-        if mezo1.get() == "" or mezo2.get() == "" or mezo3.get() == "" or mezo4.get() == "":
-            mezo4.delete(0, END)
-            mezo4.insert(0, "Írd be az adatokat!")
-        else:
-            A = eval(mezo1.get())
-            B = eval(mezo2.get())
-            C = eval(mezo3.get())
-            D = eval(mezo4.get())
 
-        if A > 0 and B > 0 and C > 0 and D > 0:
-            terulet = A + B + C + D
+    def szamit():
+        A = eval(mezo1.get())
+        B = eval(mezo2.get())
+        C = eval(mezo3.get())
+        D = eval(mezo4.get())
+
+        if A <= 0 or B <= 0 or C <= 0 or D <= 0:
             mezo5.delete(0, END)
-            mezo5.insert(0,str(terulet))
+            mezo5.insert(0, 'Nem lehet nulla / negatív szám')
         else:
+            kerulet = A + B + C + D
+            mezo5.delete(0,END)
+            mezo5.insert(0,str(kerulet))
+
+    def habaromvagy():
+        try:
+            szamit()
+
+        except:
             mezo5.delete(0, END)
-            mezo5.insert(0, "Nem jó adat! (x <= 0)")
+            mezo5.insert(0, 'Hibás karakter')
 
     def torles():
         mezo1.delete(0, END)
@@ -90,19 +95,22 @@ def trapezkerulet():
         mezo5.delete(0, END)
 
     trapezkeruletablak = Toplevel(fooldal)
-    trapezkeruletablak.title("Trapéz területe")
+    trapezkeruletablak.title("Trapéz kerülete")
     trapezkeruletablak.minsize(width = 300, height = 100)
-    szoveg1 = Label(trapezkeruletablak, text = "A:")
-    szoveg2 = Label(trapezkeruletablak, text = "B:")
-    szoveg3 = Label(trapezkeruletablak, text = "C:")
-    szoveg4 = Label(trapezkeruletablak, text = "D:")
+
+    szoveg1 = Label(trapezkeruletablak, text = "A (cm):")
+    szoveg2 = Label(trapezkeruletablak, text = "B (cm):")
+    szoveg3 = Label(trapezkeruletablak, text = "C (cm):")
+    szoveg4 = Label(trapezkeruletablak, text = "D (cm):")
+    szoveg5 = Label(trapezkeruletablak, text = "Kerülete (cm):")
 
     szoveg1.grid(row = 1)
     szoveg2.grid(row = 2)
     szoveg3.grid(row = 3)
     szoveg4.grid(row = 4)
+    szoveg5.grid(row = 6)
         
-    szamitasgomb = Button(trapezkeruletablak, text = "Számítás", command= szamit)
+    szamitasgomb = Button(trapezkeruletablak, text = "Számítás", command= habaromvagy)
     szamitasgomb.grid(row = 5, column = 2, sticky = W)
 
     mezo1 = Entry(trapezkeruletablak)
@@ -127,6 +135,7 @@ def trapezkerulet():
 
 
 
+#ideiglenes
 fooldal = Tk()
 
 fooldal.minsize(100,100)
