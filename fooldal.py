@@ -41,7 +41,6 @@ menu5.config(menu=paralelogramma)
 menu6=Menubutton(menusor, text="Rombusz", underline=0)
 menu6.pack(side=LEFT)
 rombusz=Menu(menu6)
-
 rombusz.add_command(label="Terület", underline=0)
 rombusz.add_command(label="Kerület", underline=0)
 menu6.config(menu=rombusz)
