@@ -1,0 +1,72 @@
+from tkinter import *
+fooldal=Tk()
+
+menusor=Frame()
+menusor.pack(side=TOP, fill=X)
+
+menu1=Menubutton(menusor, text="Névjegy", underline=0)
+menu1.pack(side=LEFT)
+fajl=Menu(menu1)
+fajl.add_command(label="Készítők", underline=0)
+menu1.config(menu=fajl)
+
+menu2=Menubutton(menusor, text="Kör", underline=0)
+menu2.pack(side=LEFT)
+kor=Menu(menu2)
+kor.add_command(label="Terület", underline=0)
+kor.add_command(label="Kerület", underline=0)
+menu2.config(menu=kor)
+
+menu3=Menubutton(menusor, text="Négyzet", underline=0)
+menu3.pack(side=LEFT)
+negyzet=Menu(menu3)
+negyzet.add_command(label="Terület", underline=0)
+negyzet.add_command(label="Kerület", underline=0)
+menu3.config(menu=negyzet)
+
+menu4=Menubutton(menusor, text="Téglalap", underline=0)
+menu4.pack(side=LEFT)
+teglalap=Menu(menu3)
+teglalap.add_command(label="Terület", underline=0)
+teglalap.add_command(label="Kerület", underline=0)
+menu4.config(menu=teglalap)
+
+menu5=Menubutton(menusor, text="Paralelogramma", underline=0)
+menu5.pack(side=LEFT)
+paralelogramma=Menu(menu5)
+paralelogramma.add_command(label="Terület", underline=0)
+paralelogramma.add_command(label="Kerület", underline=0)
+menu5.config(menu=paralelogramma)
+
+menu6=Menubutton(menusor, text="Rombusz", underline=0)
+menu6.pack(side=LEFT)
+rombusz=Menu(menu6)
+
+rombusz.add_command(label="Terület", underline=0)
+rombusz.add_command(label="Kerület", underline=0)
+menu6.config(menu=rombusz)
+
+menu7=Menubutton(menusor, text="Trapéz", underline=0)
+menu7.pack(side=LEFT)
+trapez=Menu(menu7)
+trapez.add_command(label="Terület", underline=0)
+trapez.add_command(label="Kerület", underline=0)
+menu7.config(menu=trapez)
+
+menu8=Menubutton(menusor, text="Háromszög", underline=0)
+menu8.pack(side=LEFT)
+haromszog=Menu(menu8)
+haromszog.add_command(label="Terület", underline=0)
+haromszog.add_command(label="Kerület", underline=0)
+menu8.config(menu=haromszog)
+
+menu9=Menubutton(menusor, text="Deltoid", underline=0)
+menu9.pack(side=LEFT)
+deltoid=Menu(menu6)
+deltoid.add_command(label="Terület", underline=0)
+deltoid.add_command(label="Kerület", underline=0)
+menu9.config(menu=deltoid)
+
+fooldal.title("Síkidom számítás")
+fooldal.minsize(width=500, height=100)
+fooldal.mainloop()
