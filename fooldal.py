@@ -1,7 +1,8 @@
-from email.iterators import body_line_iterator
+
 from tkinter import *
 from tkinter.font import BOLD
 fooldal=Tk()
+gyoker="C:\\Users\\beretizsofia\\Desktop\\janiszamol\\"
  
 menusor=Frame()
 menusor.pack(side=TOP, fill=X)
@@ -67,12 +68,11 @@ deltoid=Menu(menu9, bg = "#769955", fg='white', font=10)
 deltoid.add_command(label="Terület")
 deltoid.add_command(label="Kerület")
 menu9.config(menu=deltoid)
-can1= Canvas(fooldal, width=160, height=160, bg="white")
 
-photo = PhotoImage(file="menukep.png")
 
-can1.grid(row=1, column=3, rowspan=5)
-item = can1.create_image(70,70, image= photo)
+
+
+
 fooldal.title("Síkidom számítás")
 fooldal.minsize(width=400, height=400)
 fooldal.mainloop()
