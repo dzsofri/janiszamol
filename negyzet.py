@@ -83,28 +83,31 @@ def negyzetkerulet():
 
     szoveg1 = Label(negyzetkeruletablak, text = "A (cm):")
     szoveg5 = Label(negyzetkeruletablak, text = "Kerülete (cm):")
-
-    szoveg1.grid(row = 1)
-    szoveg5.grid(row = 6)
-        
+    szoveg2 = Label(negyzetkeruletablak, text = "A")
+    szoveg1.grid(row = 1, column = 1, sticky = W)
+    szoveg5.grid(row = 3, column = 1, sticky = W)
+    szoveg2.grid(row = 3, column = 3, sticky = E,padx = 5)    
     szamitasgomb = Button(negyzetkeruletablak, text = "Számítás", command= habaromvagy)
-    szamitasgomb.grid(row = 5, column = 2, sticky = W)
+    szamitasgomb.grid(row = 2, column = 2, sticky = W)
 
     mezo1 = Entry(negyzetkeruletablak)
-    mezo2 = Entry(negyzetkeruletablak)
-    mezo3 = Entry(negyzetkeruletablak)
-    mezo4 = Entry(negyzetkeruletablak)
     mezo5 = Entry(negyzetkeruletablak)
 
     mezo1.grid(row = 1, column = 2, sticky = W)
-    mezo5.grid(row = 6, column = 2, sticky = W)
+    mezo5.grid(row = 3, column = 2, sticky = W)
 
-    trapezkilep = Button(negyzetkeruletablak, text = "Kilépés", command = negyzetkeruletablak.destroy)
-    trapezkilep.grid(row = 7, column = 3, sticky = W)
+    kilep = Button(negyzetkeruletablak, text = "Kilépés", command = negyzetkeruletablak.destroy)
+    kilep.grid(row = 4, column = 2, sticky = E)
 
-    trapez_adattorles = Button(negyzetkeruletablak, text = "Törlés", command = torles)
-    trapez_adattorles.grid(row = 7, column = 2, sticky = W)
-        
+    adattorles = Button(negyzetkeruletablak, text = "Törlés", command = torles)
+    adattorles.grid(row = 4, column = 2, sticky = W)
+       
+    w = Canvas(negyzetkeruletablak, width=200, height=200)
+    w.create_rectangle(0, 0, 150, 150, fill="#A8C989", outline = 'black')
+    w.create_line(4,150,4,0, fill="red", width=4)
+    w.grid(row = 2, column = 4, rowspan=7, sticky = E)
+    
+ 
     negyzetkeruletablak.mainloop()
 
 
