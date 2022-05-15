@@ -1,8 +1,16 @@
+
 from tkinter import *
 from tkinter.font import BOLD
 fooldal=Tk()
 gyoker="C:\\Users\\beretizsofia\\Desktop\\janiszamol\\"
- 
+
+#-------------importalas-------------
+
+
+
+
+
+#-------------------------------------
 menusor=Frame()
 menusor.pack(side=TOP, fill=X)
 
@@ -33,6 +41,7 @@ teglalap.add_command(label="Terület")
 teglalap.add_command(label="Kerület")
 menu4.config(menu=teglalap)
 
+
 menu5=Menubutton(menusor, text="Paralelogramma", bg = "#A8C989", fg='white', font=20)
 menu5.pack(side=LEFT)
 paralelogramma=Menu(menu5, bg = "#769955", fg='white', font=10)
@@ -46,6 +55,7 @@ rombusz=Menu(menu6, bg = "#769955", fg='white', font=10)
 rombusz.add_command(label="Terület")
 rombusz.add_command(label="Kerület")
 menu6.config(menu=rombusz)
+
 
 menu7=Menubutton(menusor, text="Trapéz", bg = "#A8C989", fg='white', font=20)
 menu7.pack(side=LEFT)
@@ -67,8 +77,8 @@ deltoid=Menu(menu9, bg = "#769955", fg='white', font=10)
 deltoid.add_command(label="Terület")
 deltoid.add_command(label="Kerület")
 menu9.config(menu=deltoid)
-
-
+imge = PhotoImage(file = "menukep.png")
+Label(fooldal, image = imge).pack(side = LEFT)
 
 
 
