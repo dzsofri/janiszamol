@@ -47,6 +47,12 @@ def paralelogrammakerulet():
     m3.grid(row=3, column=2, sticky=W)
     gomb2.grid(row=4, column=2, sticky=E)
 
+    c = Canvas(paralelogramma, width=150, height=150, bg="white")
+    c.create_polygon(65, 55, 37.5, 110, 110, 110, 135, 55, outline = "blue", fill = "#A8C989")
+    c.create_line(65, 55, 37.5, 110, fill='red', width=4)
+    c.create_line(65, 55, 135, 55, fill='red', width=4)    
+    c.grid(row=1, column=4, rowspan=7)
+
 def paralelogrammaterulet():
     def szamit():
         a = eval(m1.get())
@@ -89,10 +95,12 @@ def paralelogrammaterulet():
     m2.grid(row=2, column=2, sticky=W)
     m3.grid(row=3, column=2, sticky=W)
     gomb2.grid(row=4, column=2, sticky=E)
-    
-    c = Canvas(paralelogramma, width=300, height=300)
-    c.create_polygon(110, 90, 55, 200, 200, 200, 250, 90, outline = "blue", fill = "orange")
-    c.grid(row=5, column=4)
+
+    c = Canvas(paralelogramma, width=150, height=150, bg="white")
+    c.create_polygon(65, 55, 37.5, 110, 110, 110, 135, 55, outline = "blue", fill = "#A8C989")
+    c.create_line(65, 55, 37.5, 110, fill='red', width=4)
+    c.create_line(65, 55, 65, 110, fill='red', width=4)        
+    c.grid(row=1, column=4, rowspan=7)
 
 fooldal = Tk()
 
