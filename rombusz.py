@@ -54,7 +54,7 @@ def terulet():
     adattorles.grid(row = 5, column = 2, sticky = W)
     
     w = Canvas(teruletablak, width=220, height=200)
-    #w.create_polygon(50,85,125,10,200,85,125,160, fill="#A8C989", outline = 'black')
+    w.create_polygon(50,85,125,10,200,85,125,160, fill="#A8C989", outline = 'black')
     #w.create_line(4,100,4,0, fill="red", width=4)
     w.grid(row = 2, column = 4, rowspan=7, sticky = E)
      
@@ -111,12 +111,12 @@ def kerulet():
     adattorles = Button(keruletablak, text = "Törlés", command = torles)
     adattorles.grid(row = 5, column = 2, sticky = W)
        
-    w = Canvas(keruletablak, width=150, height=125)
-    #w.create_rectangle(0, 0, 100, 100, fill="#A8C989", outline = 'black')
+    w = Canvas(keruletablak, width=220, height=200)
+    w.create_polygon(50,85,125,10,200,85,125,160, fill="#A8C989", outline = 'black')
     #w.create_line(4,100,4,0, fill="red", width=4)
     w.grid(row = 3, column = 4, rowspan=7, sticky = E)
     
-
+ 
     keruletablak.mainloop()
 
 
