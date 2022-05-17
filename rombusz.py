@@ -116,7 +116,7 @@ def kerulet():
     #w.create_line(4,100,4,0, fill="red", width=4)
     w.grid(row = 3, column = 4, rowspan=7, sticky = E)
     
- 
+
     keruletablak.mainloop()
 
 
