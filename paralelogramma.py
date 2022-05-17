@@ -23,7 +23,10 @@ def paralelogrammakerulet():
             m3.insert(0, 'Hibás karakter')
 
 
-    
+    def torles():
+        m1.delete(0, END)
+        m2.delete(0, END)
+        m3.delete(0, END)
 
     paralelogramma = Toplevel(fooldal)
     paralelogramma.title("A paralelogramma kerülete")
@@ -37,6 +40,8 @@ def paralelogrammakerulet():
     m2= Entry(paralelogramma, width=30)
     m3= Entry(paralelogramma, width=30)
 
+    adattorles = Button(paralelogramma, text = "Törlés", command = torles)
+    adattorles.grid(row = 7, column = 2, sticky = W)
 
     sz1.grid(row=1)
     sz2.grid(row=2)
@@ -73,7 +78,10 @@ def paralelogrammaterulet():
             m3.delete(0, END)
             m3.insert(0, 'Hibás karakter')
 
-    
+    def torles():
+        m1.delete(0, END)
+        m2.delete(0, END)
+        m3.delete(0, END)    
  
     paralelogramma = Toplevel(fooldal)
     paralelogramma.title("A paralelogramma területe")
@@ -87,6 +95,9 @@ def paralelogrammaterulet():
     m2= Entry(paralelogramma, width=30)
     m3= Entry(paralelogramma, width=30)
 
+    adattorles = Button(paralelogramma, text = "Törlés", command = torles)
+    adattorles.grid(row = 7, column = 2, sticky = W)
+    
     sz1.grid(row=1)
     sz2.grid(row=2)
     sz3.grid(row=3)
