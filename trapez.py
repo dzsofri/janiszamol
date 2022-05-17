@@ -60,11 +60,11 @@ def trapezterulet():
     trapez_adattorles.grid(row = 7, column = 2, sticky = W)
 
     trapezteruletcanvas = Canvas(trapezteruletablak, width = 200, height = 200, bg = "white")
-    trapezteruletcanvas.create_line(15, 125, 185, 125, fill="red")
-    trapezteruletcanvas.create_line(140, 50, 60, 50, fill = "blue")
+    trapezteruletcanvas.create_line(15, 125, 185, 125, fill="red", width = 4)
+    trapezteruletcanvas.create_line(140, 50, 60, 50, fill = "blue", width = 4)
     trapezteruletcanvas.create_line(15, 125, 60, 50, fill = "black")
     trapezteruletcanvas.create_line(185, 125, 140, 50, fill = "black")
-    trapezteruletcanvas.create_line(100, 125, 100, 50, fill = "lightgreen")
+    trapezteruletcanvas.create_line(100, 125, 100, 50, fill = "lightgreen", width = 4)
     trapezteruletcanvas.grid(column = 4, row = 1, rowspan = 8)
 
     trapezteruletablak.mainloop()
@@ -140,10 +140,10 @@ def trapezkerulet():
     trapez_adattorles.grid(row = 7, column = 2, sticky = W)
 
     trapezkeruletcanvas = Canvas(trapezkeruletablak, width = 200, height = 200, bg = "white")
-    trapezkeruletcanvas.create_line(15, 125, 185, 125, fill="red")
-    trapezkeruletcanvas.create_line(140, 50, 60, 50, fill = "blue")
-    trapezkeruletcanvas.create_line(15, 125, 60, 50, fill = "lightgreen")
-    trapezkeruletcanvas.create_line(185, 125, 140, 50, fill = "brown")
+    trapezkeruletcanvas.create_line(15, 125, 185, 125, fill="red", width = 4)
+    trapezkeruletcanvas.create_line(140, 50, 60, 50, fill = "blue", width = 4)
+    trapezkeruletcanvas.create_line(15, 125, 60, 50, fill = "lightgreen", width = 4)
+    trapezkeruletcanvas.create_line(185, 125, 140, 50, fill = "brown", width = 4)
     trapezkeruletcanvas.grid(column = 4, row = 1, rowspan = 7)
         
     trapezkeruletablak.mainloop()

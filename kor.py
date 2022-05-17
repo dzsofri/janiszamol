@@ -50,7 +50,7 @@ def korterulet():
 
     korteruletcanvas = Canvas(korteruletablak, width = 200, height = 200, bg = "white")
     korteruletcanvas.grid(column = 4, row = 1, rowspan = 7)
-    korteruletcanvas.create_line(102, 102, 182, 102, fill = "red")
+    korteruletcanvas.create_line(102, 102, 182, 102, fill = "red", width = 4)
 
     def create_circle(x, y, r, canvasName):
         x0 = x - r
@@ -114,7 +114,7 @@ def korkerulet():
 
     korkeruletcanvas = Canvas(korkeruletablak, width = 200, height = 200, bg = "white")
     korkeruletcanvas.grid(column = 4, row = 1, rowspan = 7)
-    korkeruletcanvas.create_line(102, 102, 182, 102, fill = "red")
+    korkeruletcanvas.create_line(102, 102, 182, 102, fill = "red", width = 4)
 
     def create_circle(x, y, r, canvasName):
         x0 = x - r
