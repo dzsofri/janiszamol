@@ -25,7 +25,7 @@ def terulet():
         mezo4.delete(0, END)
 
     teruletablak = Toplevel(fooldal)
-    teruletablak.title("Négyzet területe")
+    teruletablak.title("Rombusz területe")
     teruletablak.minsize(width = 300, height = 100)
 
     szoveg1 = Label(teruletablak, text = "a (cm):")
@@ -55,7 +55,7 @@ def terulet():
     
     w = Canvas(teruletablak, width=220, height=200)
     w.create_polygon(50,85,125,10,200,85,125,160, fill="#A8C989", outline = 'black')
-    #w.create_line(4,100,4,0, fill="red", width=4)
+    w.create_line(50,85,125,10, fill="red", width=4)
     w.grid(row = 2, column = 4, rowspan=7, sticky = E)
      
     teruletablak.mainloop()
@@ -89,7 +89,7 @@ def kerulet():
         mezo5.delete(0, END)
 
     keruletablak = Toplevel(fooldal)
-    keruletablak.title("Négyzet kerülete")
+    keruletablak.title("Rombusz kerülete")
     keruletablak.minsize(width = 300, height = 100)
 
     szoveg1 = Label(keruletablak, text = "A (cm):")
@@ -113,7 +113,7 @@ def kerulet():
        
     w = Canvas(keruletablak, width=220, height=200)
     w.create_polygon(50,85,125,10,200,85,125,160, fill="#A8C989", outline = 'black')
-    #w.create_line(4,100,4,0, fill="red", width=4)
+    w.create_line(50,85,125,10, fill="red", width=4)
     w.grid(row = 3, column = 4, rowspan=7, sticky = E)
     
  
