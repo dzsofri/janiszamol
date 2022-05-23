@@ -54,8 +54,9 @@ def terulet():
     adattorles.grid(row = 6, column = 2, sticky = W)
     
     w = Canvas(teruletablak, width=220, height=200)
-    #w.create_polygon(50,85,125,10,200,85,125,160, fill="#A8C989", outline = 'black')
-    #w.create_line(50,85,125,10, fill="red", width=4)
+    w.create_polygon(50,85,125,10,200,80,125,175, fill="#A8C989", outline = 'black')
+    #w.create_line(4,180,4,100, fill="red", width=4)
+    w.create_line(50,85,125,10, fill="red", width=4)
     w.grid(row = 2, column = 4, rowspan=7, sticky = E)
      
     teruletablak.mainloop()
@@ -118,8 +119,9 @@ def kerulet():
     adattorles.grid(row = 6, column = 2, sticky = W)
        
     w = Canvas(keruletablak, width=220, height=200)
-    #w.create_polygon(50,85,125,10,200,85,125,160, fill="#A8C989", outline = 'black')
-    #w.create_line(50,85,125,10, fill="red", width=4)
+    w.create_polygon(50,85,125,10,200,80,125,175, fill="#A8C989", outline = 'black')
+    #w.create_line(4,180,4,100, fill="red", width=4)
+    w.create_line(50,85,125,10, fill="red", width=4)
     w.grid(row = 3, column = 4, rowspan=7, sticky = E)
     
  
