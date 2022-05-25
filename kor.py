@@ -23,7 +23,7 @@ def korterulet():
         mezo1.delete(0, END)
         mezo2.delete(0, END)
 
-    korteruletablak = Toplevel(fooldal)
+    korteruletablak = Tk()
     korteruletablak.title("Kör területe")
     korteruletablak.minsize(width = 300, height = 100)
 
@@ -61,7 +61,6 @@ def korterulet():
 
     create_circle(102, 102, 80, korteruletcanvas)
 
-    korteruletablak.mainloop()
 
 
 def korkerulet():
@@ -87,7 +86,7 @@ def korkerulet():
         mezo1.delete(0, END)
         mezo2.delete(0, END)
 
-    korkeruletablak = Toplevel(fooldal)
+    korkeruletablak = Tk()
     korkeruletablak.title("Kör kerülete")
     korkeruletablak.minsize(width = 300, height = 100)
 
@@ -125,16 +124,3 @@ def korkerulet():
 
     create_circle(102, 102, 80, korkeruletcanvas)
 
-    korkeruletablak.mainloop()
-
-#ideiglenes
-fooldal = Tk()
-
-fooldal.minsize(100,100)
-terulet = Button(fooldal, text = "Terület", command = korterulet)
-terulet.pack()
-
-kerulet = Button(fooldal, text = "Kerület", command = korkerulet)
-kerulet.pack()
-
-fooldal.mainloop()

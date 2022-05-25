@@ -26,7 +26,7 @@ def trapezterulet():
         mezo3.delete(0, END)
         mezo4.delete(0, END)
 
-    trapezteruletablak = Toplevel(fooldal)
+    trapezteruletablak = Tk()
     trapezteruletablak.title("Trapéz területe")
     trapezteruletablak.minsize(width = 300, height = 100)
 
@@ -61,13 +61,13 @@ def trapezterulet():
 
     trapezteruletcanvas = Canvas(trapezteruletablak, width = 200, height = 200, bg = "white")
     trapezteruletcanvas.create_line(15, 125, 185, 125, fill="red", width = 4)
-    trapezteruletcanvas.create_line(140, 50, 60, 50, fill = "blue", width = 4)
-    trapezteruletcanvas.create_line(15, 125, 60, 50, fill = "black")
-    trapezteruletcanvas.create_line(185, 125, 140, 50, fill = "black")
-    trapezteruletcanvas.create_line(100, 125, 100, 50, fill = "lightgreen", width = 4)
+    trapezteruletcanvas.create_line(140, 50, 60, 50, fill = "red", width = 4)
+    trapezteruletcanvas.create_line(15, 125, 60, 50, fill = "black", width= 2)
+    trapezteruletcanvas.create_line(185, 125, 140, 50, fill = "black", width= 2)
+    trapezteruletcanvas.create_line(100, 125, 100, 50, fill = "red", width = 4)
     trapezteruletcanvas.grid(column = 4, row = 1, rowspan = 8)
 
-    trapezteruletablak.mainloop()
+
 
 
 
@@ -102,7 +102,7 @@ def trapezkerulet():
         mezo4.delete(0, END)
         mezo5.delete(0, END)
 
-    trapezkeruletablak = Toplevel(fooldal)
+    trapezkeruletablak = Tk()
     trapezkeruletablak.title("Trapéz kerülete")
     trapezkeruletablak.minsize(width = 300, height = 100)
 
@@ -141,23 +141,8 @@ def trapezkerulet():
 
     trapezkeruletcanvas = Canvas(trapezkeruletablak, width = 200, height = 200, bg = "white")
     trapezkeruletcanvas.create_line(15, 125, 185, 125, fill="red", width = 4)
-    trapezkeruletcanvas.create_line(140, 50, 60, 50, fill = "blue", width = 4)
-    trapezkeruletcanvas.create_line(15, 125, 60, 50, fill = "lightgreen", width = 4)
-    trapezkeruletcanvas.create_line(185, 125, 140, 50, fill = "brown", width = 4)
+    trapezkeruletcanvas.create_line(140, 50, 60, 50, fill = "red", width = 4)
+    trapezkeruletcanvas.create_line(15, 125, 60, 50, fill = "red", width = 4)
+    trapezkeruletcanvas.create_line(185, 125, 140, 50, fill = "red", width = 4)
     trapezkeruletcanvas.grid(column = 4, row = 1, rowspan = 7)
         
-    trapezkeruletablak.mainloop()
-
-
-
-#ideiglenes
-fooldal = Tk()
-
-fooldal.minsize(100,100)
-terulet = Button(fooldal, text = "Terület", command = trapezterulet)
-terulet.pack()
-
-kerulet = Button(fooldal, text = "Kerület", command = trapezkerulet)
-kerulet.pack()
-
-fooldal.mainloop()
