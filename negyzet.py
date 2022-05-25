@@ -22,7 +22,7 @@ def negyzetterulet():
         mezo1.delete(0, END)
         mezo4.delete(0, END)
 
-    negyzetteruletablak = Toplevel(fooldal)
+    negyzetteruletablak = Tk()
     negyzetteruletablak.title("Négyzet területe")
     negyzetteruletablak.minsize(width = 300, height = 100)
 
@@ -53,8 +53,7 @@ def negyzetterulet():
     w.create_rectangle(0, 0, 100, 100, fill="#A8C989", outline = 'black')
     w.create_line(4,100,4,0, fill="red", width=4)
     w.grid(row = 2, column = 4, rowspan=7, sticky = E)
-     
-    negyzetteruletablak.mainloop()
+
 
 
 
@@ -84,7 +83,7 @@ def negyzetkerulet():
         mezo1.delete(0, END)
         mezo5.delete(0, END)
 
-    negyzetkeruletablak = Toplevel(fooldal)
+    negyzetkeruletablak = Tk()
     negyzetkeruletablak.title("Négyzet kerülete")
     negyzetkeruletablak.minsize(width = 300, height = 100)
 
@@ -113,20 +112,5 @@ def negyzetkerulet():
     w.create_rectangle(0, 0, 100, 100, fill="#A8C989", outline = 'black')
     w.create_line(4,100,4,0, fill="red", width=4)
     w.grid(row = 3, column = 4, rowspan=7, sticky = E)
-    
- 
-    negyzetkeruletablak.mainloop()
 
 
-
-#ideiglenes
-fooldal = Tk()
-
-fooldal.minsize(100,100)
-terulet = Button(fooldal, text = "Terület", command = negyzetterulet)
-terulet.pack()
-
-kerulet = Button(fooldal, text = "Kerület", command = negyzetkerulet)
-kerulet.pack()
-
-fooldal.mainloop()

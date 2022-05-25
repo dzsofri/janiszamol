@@ -1,5 +1,5 @@
 from tkinter import *
-def terulet():
+def deltoidterulet():
     def szamit():
         f = eval(mezo1.get())
         m = eval(mezo2.get())
@@ -24,7 +24,7 @@ def terulet():
         mezo2.delete(0, END)
         mezo4.delete(0, END)
 
-    teruletablak = Toplevel(fooldal)
+    teruletablak = Tk()
     teruletablak.title("Deltoid területe")
     teruletablak.minsize(width = 300, height = 100)
 
@@ -54,16 +54,15 @@ def terulet():
     adattorles.grid(row = 6, column = 2, sticky = W)
     
     w = Canvas(teruletablak, width=220, height=200)
-    w.create_polygon(50,85,125,10,200,80,125,175, fill="#A8C989", outline = 'black')
-    #w.create_line(4,180,4,100, fill="red", width=4)
-    w.create_line(50,85,125,10, fill="red", width=4)
+    w.create_polygon(50,85,125,10,200,85,125,175, fill="#A8C989", outline = 'black')
+    w.create_line(125,175,125,10, fill="red", width=4)
+    w.create_line(50, 85, 200, 85, fill="red", width=4)
     w.grid(row = 2, column = 4, rowspan=7, sticky = E)
-     
-    teruletablak.mainloop()
 
 
 
-def kerulet():
+
+def deltoidkerulet():
 
     def szamit():
         a = eval(mezo1.get())
@@ -74,7 +73,7 @@ def kerulet():
             mezo5.delete(0, END)
             mezo5.insert(0, 'Nem lehet nulla / negatív szám')
         else:
-            kerulet =2(a+b)
+            kerulet=2*a+2*b
             mezo5.delete(0,END)
             mezo5.insert(0,str(kerulet))
 
@@ -91,7 +90,7 @@ def kerulet():
         mezo2.delete(0, END)
         mezo5.delete(0, END)
 
-    keruletablak = Toplevel(fooldal)
+    keruletablak = Tk()
     keruletablak.title("DEltoid kerülete")
     keruletablak.minsize(width = 300, height = 100)
 
@@ -119,24 +118,9 @@ def kerulet():
     adattorles.grid(row = 6, column = 2, sticky = W)
        
     w = Canvas(keruletablak, width=220, height=200)
-    w.create_polygon(50,85,125,10,200,80,125,175, fill="#A8C989", outline = 'black')
-    #w.create_line(4,180,4,100, fill="red", width=4)
+    w.create_polygon(50,85,125,10,200,85,125,175, fill="#A8C989", outline = 'black')
     w.create_line(50,85,125,10, fill="red", width=4)
+    w.create_line(50,85,125,175, fill="red", width=4)
     w.grid(row = 3, column = 4, rowspan=7, sticky = E)
     
  
-    keruletablak.mainloop()
-
-
-
-#ideiglenes
-fooldal = Tk()
-
-fooldal.minsize(100,100)
-terulet = Button(fooldal, text = "Terület", command = terulet)
-terulet.pack()
-
-kerulet = Button(fooldal, text = "Kerület", command = kerulet)
-kerulet.pack()
-
-fooldal.mainloop()

@@ -1,5 +1,5 @@
 from tkinter import *
-def terulet():
+def rombuszterulet():
     def szamit():
         a = eval(mezo1.get())
         m = eval(m2.get())
@@ -24,7 +24,8 @@ def terulet():
         mezo2.delete(0, END)
         mezo4.delete(0, END)
 
-    teruletablak = Toplevel(fooldal)
+    teruletablak = Tk()
+
     teruletablak.title("Rombusz területe")
     teruletablak.minsize(width = 300, height = 100)
 
@@ -58,11 +59,9 @@ def terulet():
     w.create_line(50,85,125,10, fill="red", width=4)
     w.grid(row = 2, column = 4, rowspan=7, sticky = E)
      
-    teruletablak.mainloop()
 
 
-
-def kerulet():
+def rombuszkerulet():
 
     def szamit():
         a = eval(mezo1.get())
@@ -88,7 +87,8 @@ def kerulet():
         mezo1.delete(0, END)
         mezo5.delete(0, END)
 
-    keruletablak = Toplevel(fooldal)
+    keruletablak = Tk()
+
     keruletablak.title("Rombusz kerülete")
     keruletablak.minsize(width = 300, height = 100)
 
@@ -117,18 +117,3 @@ def kerulet():
     w.grid(row = 3, column = 4, rowspan=7, sticky = E)
     
  
-    keruletablak.mainloop()
-
-
-
-#ideiglenes
-fooldal = Tk()
-
-fooldal.minsize(100,100)
-terulet = Button(fooldal, text = "Terület", command = terulet)
-terulet.pack()
-
-kerulet = Button(fooldal, text = "Kerület", command = kerulet)
-kerulet.pack()
-
-fooldal.mainloop()

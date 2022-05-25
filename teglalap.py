@@ -24,7 +24,9 @@ def teglalapterulet():
         mezo2.delete(0, END)
         mezo3.delete(0, END)
 
-    teglalapteruletablak = Toplevel(fooldal)
+    teglalapteruletablak = Tk()
+
+
     teglalapteruletablak.title("Téglalap területe")
     teglalapteruletablak.minsize(width = 300, height = 100)
 
@@ -54,12 +56,10 @@ def teglalapterulet():
     teglalap_adattorles.grid(row = 7, column = 2, sticky = W)
 
     teglalapteruletcanvas = Canvas(teglalapteruletablak, width = 200, height = 200, bg = "white")
-    teglalapteruletcanvas.create_polygon(25, 40, 180, 40, 180, 150, 25, 150, fil = "white", outline = "black")
+    teglalapteruletcanvas.create_polygon(25, 40, 180, 40, 180, 150, 25, 150, fill = "#A8C989", outline = "black")
     teglalapteruletcanvas.create_line(25, 40, 180, 40, fill="red", width = 4)
-    teglalapteruletcanvas.create_line(180, 40, 180, 150, fill = "blue", width = 4)
+    teglalapteruletcanvas.create_line(180, 40, 180, 150, fill = "red", width = 4)
     teglalapteruletcanvas.grid(column = 4, row = 1, rowspan = 8)
-
-    teglalapteruletablak.mainloop()
 
 
 
@@ -89,7 +89,8 @@ def teglalapkerulet():
         mezo2.delete(0, END)
         mezo3.delete(0, END)
 
-    teglalapkeruletablak = Toplevel(fooldal)
+    teglalapkeruletablak = Tk()
+
     teglalapkeruletablak.title("Téglalap kerülete")
     teglalapkeruletablak.minsize(width = 300, height = 100)
 
@@ -119,23 +120,10 @@ def teglalapkerulet():
     teglalap_adattorles.grid(row = 7, column = 2, sticky = W)
 
     teglalapkeruletcanvas = Canvas(teglalapkeruletablak, width = 200, height = 200, bg = "white")
-    teglalapkeruletcanvas.create_polygon(25, 40, 180, 40, 180, 150, 25, 150, fil = "white", outline = "black")
+    teglalapkeruletcanvas.create_polygon(25, 40, 180, 40, 180, 150, 25, 150, fill = "#A8C989", outline = "black")
     teglalapkeruletcanvas.create_line(25, 40, 180, 40, fill="red", width = 4)
-    teglalapkeruletcanvas.create_line(180, 40, 180, 150, fill = "blue", width = 4)
+    teglalapkeruletcanvas.create_line(180, 40, 180, 150, fill = "red", width = 4)
     teglalapkeruletcanvas.grid(column = 4, row = 1, rowspan = 7)
         
-    teglalapkeruletablak.mainloop()
 
 
-
-#ideiglenes
-fooldal = Tk()
-
-fooldal.minsize(100,100)
-terulet = Button(fooldal, text = "Terület", command = teglalapterulet)
-terulet.pack()
-
-kerulet = Button(fooldal, text = "Kerület", command = teglalapkerulet)
-kerulet.pack()
-
-fooldal.mainloop()
